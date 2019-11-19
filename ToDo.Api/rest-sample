@@ -1,0 +1,46 @@
+curl 'https://localhost:5001/api/tasks' 
+-H 'User-Agent: Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:70.0) Gecko/20100101 Firefox/70.0' 
+-H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' 
+-H 'Accept-Language: en-US,en;q=0.5' 
+--compressed 
+-H 'Connection: keep-alive' 
+-H 'Upgrade-Insecure-Requests: 1' 
+-H 'TE: Trailers'
+
+// Get all pending tasks
+curl 'https://localhost:5001/api/tasks/pending' 
+-H 'User-Agent: Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:70.0) Gecko/20100101 Firefox/70.0' 
+-H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' 
+-H 'Accept-Language: en-US,en;q=0.5' 
+--compressed 
+-H 'Connection: keep-alive' 
+-H 'Upgrade-Insecure-Requests: 1' 
+-H 'TE: Trailers'
+
+// Get all completed tasks
+curl 'https://localhost:5001/api/tasks/completed' 
+-H 'User-Agent: Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:70.0) Gecko/20100101 Firefox/70.0' 
+-H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' 
+-H 'Accept-Language: en-US,en;q=0.5' 
+--compressed 
+-H 'Connection: keep-alive' 
+-H 'Upgrade-Insecure-Requests: 1' 
+-H 'TE: Trailers'
+
+////////////////////////
+/////// COMMANDS ///////
+////////////////////////
+
+// Toggle task state
+PUT https://localhost:5001/api/tasks/f1a17ef8841342c4a481b9c17cb3bb39
+
+// Delete taks by id
+DELETE https://localhost:5001/api/tasks/6dcfe2e78751430bb3e73f5b5b1f3f1a
+
+// Create task
+POST https://localhost:5001/api/tasks
+content-type: application/json
+
+{
+    "description": "Finish The Red Book"
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ToDo.Api</name>
+    </assembly>
+    <members>
+        <member name="M:ToDo.API.Controllers.TaskCommandController.Post(ToDo.API.Models.Task)">
+            <summary>
+            Create a new task.
+            </summary>
+            <returns>The task created.</returns>
+            <response code="200">Returns the newly created item.</response>
+            <response code="400">If the item is null.</response> 
+        </member>
+        <member name="M:ToDo.API.Controllers.TaskCommandController.Delete(System.String)">
+            <summary>
+            Delete a task.
+            </summary>
+            <returns>The task deleted.</returns>
+            <response code="200">Returns the deleted item.</response>
+            <response code="400">If the task not exist.</response> 
+        </member>
+        <member name="M:ToDo.API.Controllers.TaskCommandController.ToggleState(System.String)">
+            <summary>
+            Change the task state.
+            </summary>
+            <returns>The task updated.</returns>
+            <response code="200">Returns the task with state updated.</response>
+            <response code="400">If the task not exist.</response> 
+        </member>
+        <member name="M:ToDo.API.Controllers.TaskQueryController.GetAll">
+            <summary>
+            Retrieve all tasks.
+            </summary>
+            <returns>List of all tasks saved.</returns>
+            <response code="200">Returns the full tasks list.</response>
+            <response code="400">If the tasks list is empty.</response> 
+        </member>
+        <member name="M:ToDo.API.Controllers.TaskQueryController.GetCompleted">
+            <summary>
+            Get only the completed tasks.
+            </summary>
+            <returns>A list of completed tasks.</returns>
+            <response code="200">Returns the completed tasks.</response>
+            <response code="400">If no one task is completed.</response> 
+        </member>
+        <member name="M:ToDo.API.Controllers.TaskQueryController.GetPending">
+            <summary>
+            Get only the pending tasks.
+            </summary>
+            <returns>A list of pending tasks.</returns>
+            <response code="200">Returns the pending tasks.</response>
+            <response code="400">If no one task is pending.</response> 
+        </member>
+        <member name="M:ToDo.API.Controllers.TaskQueryController.Get(System.String)">
+            <summary>
+            Get a specific task.
+            </summary>
+            <returns>A task.</returns>
+            <response code="200">Returns the task.</response>
+            <response code="400">If the task not exist.</response> 
+        </member>
+    </members>
+</doc>
