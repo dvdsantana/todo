@@ -1,0 +1,86 @@
+.filter {
+	padding: 10px 0px;
+}
+
+.filter label {
+	cursor: pointer;
+	margin-left: 10px;
+	padding: 4px;
+	float: right;
+	border: solid 1px;
+	border-radius: 25px;
+	width: 80px;
+	text-align: center;
+}
+
+label > input:checked {
+	background-color: ghostwhite;
+}
+
+ul.taskList {
+	padding: 0 25px;
+}
+
+li.task {
+	list-style-type: none;
+	font-family: Tahoma;
+	font-size: 1.2em;
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+li.task:hover .deleteTaskBtn {
+	visibility: visible;
+	opacity: 1;
+}
+
+li.completed {
+	text-decoration: line-through;
+	color: #656565;
+}
+
+input[placeholder] {
+	font-size: 1.1em;
+}
+
+.container {
+	width: 40%;
+	height: 400px;
+	position: relative;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+
+.header {
+	color: black;
+	padding: 5px;
+	text-align: center;
+	font-family: Tahoma, sans-serif;
+}
+
+.inputContainer {
+	padding: 15px;
+}
+
+.inputContainer .taskInput {
+	padding: 10px;
+	width: 100%;
+	border-radius: 25px;
+	box-sizing: border-box;
+}
+
+.deleteTaskBtn {
+	float: right;
+	color: red;
+	background: rgba(0,0,0,0);
+	font-size: 20px;
+	font-weight: bold;
+	border: 1px solid white;
+	border-radius: 50%;
+	padding: 10px 5px;
+	visibility: hidden;
+	opacity: 0;
+	line-height: 0;
+	margin-right: 5px;
+	cursor: default;
+}
